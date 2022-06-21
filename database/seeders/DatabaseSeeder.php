@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Database\Seeders\Settings\SettingSeeder;
 use Illuminate\Database\Seeder;
+use Database\Seeders\Settings\SettingSeeder;
 
 class DatabaseSeeder extends Seeder {
     /**
@@ -17,6 +17,8 @@ class DatabaseSeeder extends Seeder {
             UserSeeder::class,
             PermissionSeeder::class,
 			SettingSeeder::class,
+			CategoryDrink::class,
+			DrinkSeeder::class,
         ]);
     }
 }

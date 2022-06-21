@@ -526,36 +526,36 @@ return [
 
 	/*
     |--------------------------------------------------------------------------
-    | 20 - Newsletter
+    | 20 - Drinks
     |--------------------------------------------------------------------------
     */
 	// SUCCESS
 	201000 => [
 		'status' => 200,
-		'detail' => 'email send',
+		'detail' => 'request successful',
 		'localized' => [
 			'en' => [
-				'title' => 'Email sent',
-				'message' => 'Email has been sent.'
+				'title' => 'Drinks Found',
+				'message' => 'Drinks has been found.'
 			],
 			'de' => [
-				'title' => 'Email gesendet',
-				'message' => 'Email wurde versendet.'
+				'title' => 'Getränke gefunden',
+				'message' => 'Es wurden Getränke gefunden.'
 			]
 		]
 	],
 	// FAILURE
 	202000 => [
-		'status' => 501,
-		'detail' => 'unknown error',
+		'status' => 404,
+		'detail' => 'request failed',
 		'localized' => [
 			'en' => [
-				'title' => 'Unknown error',
-				'message' => 'Unknown error in the e-mail delivery.'
+				'title' => 'Don\'t exists',
+				'message' => 'There are no drinks.'
 			],
 			'de' => [
-				'title' => 'Unbekannter Fehler',
-				'message' => 'Unbekannter Fehler im beim Email-Versand.'
+				'title' => 'Don\'t exists',
+				'message' => 'Es existieren keine Getränke.'
 			]
 		]
 	],

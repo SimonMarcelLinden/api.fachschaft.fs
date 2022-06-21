@@ -28,3 +28,18 @@ $router->group([], function() use ($router) {
     $router->patch('/settings', 'Settings\SettingController@update');
     $router->get('/settings/{key:.*}', 'Settings\SettingController@show');
 });
+
+$router->group(['prefix' => 'categories'], function () use ($router) {
+	$router->get('/', 		'Drinks\CategoryController@index');
+	$router->get('/{id}', 	'Drinks\CategoryController@show');
+	$router->post('/{id}', 'Drinks\CategoryController@store');
+	$router->patch('/{id}', 'Drinks\CategoryController@update');
+});
+
+
+$router->group(['prefix' => 'drinks'], function () use ($router) {
+	$router->get('/', 		'Drinks\DrinkController@index');
+	$router->get('/{id}', 	'Drinks\DrinkController@show');
+	$router->post('/{id}', 'Drinks\DrinkController@store');
+	$router->patch('/{id}', 'Drinks\DrinkControllerr@update');
+});
